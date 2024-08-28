@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo&display=swap');
+
+.about-section {
+    position: relative; /* Allow positioning of the background image */
+    overflow: hidden; /* Keep the image within bounds if necessary */
+    padding: 20px; /* Add some padding for content spacing */
+    color: white; /* Ensure text is visible on dark backgrounds */
+    text-align: center;
+}
+
+.background-image {
+    position: absolute; /* Position the image absolutely within the section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire section */
+    z-index: 0; 
+    opacity: 0.6; /* Ensure it is below the text content */
+}
+
+.about-section h1 {
+    font-family: 'Aleo', serif;
+    font-size: 45px;
+    color: #181818;
+    text-align: center;
+    position: relative;
+}
+
+.Logo {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh;
+}
+
+.Logo img {
+    max-width: 100%; /* Ensures the image doesn't exceed the container's width */
+    height: auto;
+    opacity: 0.2; /* Maintains aspect ratio */
+}
+
+.logo-text {
+    position: absolute; /* Position the text absolutely within the Logo div */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Use transform to center */
+    color: black; /* Text color */
+    font-size: 40px; /* Font size */
+    text-align: center; 
+    font-family: 'Aleo', serif;
+    z-index: 1; /* Ensure text is above the logo image */
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 768px) {
+    .about-section {
+        padding: 10px;
+    }
+
+    .about-section h1 {
+        font-size: 35px; /* Smaller heading on smaller screens */
+    }
+
+    .Logo {
+        flex-direction: column;
+        height: auto; /* Adjust height for smaller screens */
+        padding: 20px 0; /* Add padding to the logo section */
+    }
+
+    .Logo img {
+        width: 80%; /* Reduce the size of the logo on smaller screens */
+        margin-bottom: 20px; /* Add space below the logo image */
+    }
+
+    .logo-text {
+        font-size: 24px; /* Smaller text for smaller screens */
+        padding: 0 10px; /* Add padding around text */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .about-section h1 {
+        font-size: 28px; /* Even smaller heading for phones */
+    }
+
+    .Logo img {
+        width: 70%; /* Further reduce the logo size on small screens */
+    }
+
+    .logo-text {
+        font-size: 20px; /* Smaller text for phones */
+    }
+}
