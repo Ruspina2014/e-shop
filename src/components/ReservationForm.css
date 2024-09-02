@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aleo&display=swap');
 
 .form-section {
-    background: linear-gradient(90deg, #EAF8BF 33%, #FFFFFF 33%);
+    background: linear-gradient(90deg, #FFFFFF 33%, #FFFFFF 33%);
     padding: 50px;
     height: 100vh;
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 .form {
-    padding: 40px; /* Adjust padding as needed */
+    padding: 39px; 
     background-color: #FFFFFF;
     overflow: hidden;
     width: 100%;

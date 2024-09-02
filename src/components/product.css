@@ -68,12 +68,28 @@
 
 .size-selection, .quantity-selection {
   margin: 10px 0;
+
 }
 
 .size-selection select, .quantity-selection input {
   margin-left: 10px;
+ 
+  
+
+
 }
 
+.size-selection {
+  width: 100%; /* Ensure it takes the full width available */
+  margin: 0; /* Remove any existing margin */
+  padding: 0; /* Remove any existing padding */
+}
+
+.size-selection select {
+  width: 250px; /* Ensure the select box takes full width */
+  margin: 0; /* Remove any margin that may affect alignment */
+  padding: 5px 10px; /* Keep padding for comfortable user experience */
+}
 .add-to-cart, .buy-now {
   margin-right: 10px;
   padding: 10px 20px;
@@ -143,7 +159,9 @@
 
 .selectors {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  width: 100%; /* Make sure it takes the full width */
 }
 
 .color-selector {
@@ -190,6 +208,9 @@
   padding: 5px 10px;
   cursor: pointer;
   color: #787878; /* Dark text color */
+ 
+  
+  
 }
 
 .size:hover {
@@ -252,6 +273,7 @@
   .selectors {
     flex-direction: column;
     align-items: center;
+   
   }
 
   .color-selector {
@@ -260,6 +282,9 @@
 
   .size-selection {
     margin: 10px;
+   
+
+   
   }
 
   .add-to-cart, .buy-now {

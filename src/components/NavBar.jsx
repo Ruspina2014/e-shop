@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import Sidebar from './Sidebar.jsx';
 import styles from './NavBar.module.css';
-import logo from '../assets/ShOpy.png';
+import l from '../assets/shoopi.png'
 import cart from '../assets/Untitled design 1.png';
 import { FaBars } from 'react-icons/fa';
 import { CartContext } from './CartContext';
@@ -24,7 +24,7 @@ const NavBar = () => {
         <button className={styles.menuButton} onClick={toggleSidebar}>
           <FaBars />
         </button>
-        <Link to="/"><img src={logo} alt="Logo" className={styles.logo} /></Link>
+        <Link to="/"><img src={l} alt="Logo" className={styles.logo} /></Link>
         <ul className={styles.navLinks}>
           <li>
               <Link to="/catalog" className={styles.navLink}>Catalog</Link>

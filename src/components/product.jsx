@@ -12,9 +12,9 @@ const ProductDetails = () => {
 
   const product = Data.find((item) => item.id === parseInt(id));
 
-  const [size, setSize] = useState(product.category === "Bracelet" ? null : product.sizes[0]);
+  // Set default size only if the category is not "Bracelet" or "Tote Bag"
+  const [size, setSize] = useState(product.category === "Bracelet" || product.category === "Tote Bag" ? null : product.sizes[0]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [selectedColor, setSelectedColor] = useState(product.colors[0].name);
   const [loading, setLoading] = useState(false);
 
   const handleImageClick = (index) => {
@@ -27,30 +27,34 @@ const ProductDetails = () => {
       id: product.id,
       name: product.name,
       mainImage: product.images[0],
-      selectedColor,
       size,
       price: product.price,
       quantity: 1,
     };
 
+    // Check if the item already exists in the cart
     const existingItemIndex = cartItems.findIndex(
-      (item) => item.id === product.id && item.selectedColor === selectedColor && item.size === size
+      (item) => item.id === product.id && item.size === size
     );
 
+    let updatedCartItems;
     if (existingItemIndex >= 0) {
-      const updatedCartItems = [...cartItems];
+      // If it exists, update the quantity
+      updatedCartItems = [...cartItems];
       updatedCartItems[existingItemIndex].quantity += 1;
-      setCartItems(updatedCartItems);
-      localStorage.setItem('cart', JSON.stringify(updatedCartItems));
     } else {
-      const updatedCartItems = [...cartItems, cartItem];
-      setCartItems(updatedCartItems);
-      localStorage.setItem('cart', JSON.stringify(updatedCartItems));
+      // If it does not exist, add the new item
+      updatedCartItems = [...cartItems, cartItem];
     }
 
+    // Save updated cart items to both context and local storage
+    setCartItems(updatedCartItems);
+    localStorage.setItem('cart', JSON.stringify(updatedCartItems));
+
+    // Simulate a delay for the spinner
     setTimeout(() => {
       setLoading(false);
-    }, 2000); // simulate a delay for the spinner
+    }, 2000);
   };
 
   return (
@@ -86,23 +90,10 @@ const ProductDetails = () => {
               <span className='meta-name'>Category: {product.category}</span>
             </div>
           </div>
-          <p className="price">45 DT <span className="discount">55 DT</span>{product.discount ? <span className="off">20% OFF</span> : null}</p>
+          <p className="price">{product.price} DT <span className="discount">{product.discountPrice}DT</span>{product.discount ? <span className="off">20% OFF</span> : null}</p>
           <hr style={{ borderColor: '#E4E7E9', borderWidth: '0.5px' }} />
           <div className='selectors'>
-            <div className="color-selector">
-              <p>Color</p>
-              <div className="color-options">
-                {product.colors.map((color) => (
-                  <div
-                    key={color.id}
-                    className={`color-circle ${selectedColor === color.name ? 'selected' : ''}`}
-                    style={{ backgroundColor: color.colorCode }}
-                    onClick={() => setSelectedColor(color.name)}
-                  ></div>
-                ))}
-              </div>
-            </div>
-            {product.category === "Bracelet" ? null :
+            {(product.category === "Bracelet" || product.category === "Tote Bag") ? null :
               <div className="size-selection">
                 <p>Size</p>
                 <select className='size' value={size} onChange={(e) => setSize(e.target.value)}>
@@ -123,7 +114,7 @@ const ProductDetails = () => {
             {loading ? <div className="spinner"></div> : 'ADD TO CART'}
             {!loading && <img src={cart} alt="cart" style={{ width: "24px", marginLeft: "5px" }} />}
           </button>
-          <button className="buy-now">Buy Now</button>
+          
           <h5 className='garantee'>100% Guarantee Safe Checkout</h5>
         </div>
       </div>

@@ -16,7 +16,7 @@
     height: 100%;
     object-fit: cover; /* Ensure the image covers the entire section */
     z-index: 0; 
-    opacity: 0.6; /* Ensure it is below the text content */
+    opacity: 0.8; /* Ensure it is below the text content */
 }
 
 .about-section h1 {
@@ -25,6 +25,8 @@
     color: #181818;
     text-align: center;
     position: relative;
+   
+    
 }
 
 .Logo {

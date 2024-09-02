@@ -1,80 +1,67 @@
-import tShirtFront from '../assets/t-shirt_f.png';
-import tShirtBack from '../assets/T-shirt_b.png';
-import bracelet1 from '../assets/image 10.png';
-import bracelet2 from '../assets/img2.jpeg';
-import tShirtLeadershipFront from '../assets/t-shirt_f.png';
-import tShirtLeadershipBack from '../assets/T-shirt_b.png';
-import braceletUnity1 from '../assets/image 10.png';
-import braceletUnity2 from '../assets/img2.jpeg';
-import tShirtImpactFront from '../assets/t-shirt_f.png';
-import tShirtImpactBack from '../assets/T-shirt_b.png';
+
+import braBlue1 from '../assets/braBlue1.jpg';
+import braBlue2 from '../assets/braBlue2.jpg';
+import tote1 from '../assets/tote1.jpg';
+import tote2 from '../assets/tote2.jpg';
+import Amena1 from '../assets/Amena1.jpg';
+import Amena2 from '../assets/Amena2.jpg';
+import blue1 from '../assets/blue1.jpg';
+import blue2 from '../assets/blue2.jpg';
+import tulds1 from '../assets/tulds1.jpg';
+import tulds2 from '../assets/tulds2.jpg';
 
 const products = [
     {
         id: 1,
-        name: "2024 Aiesec Ruspina T-Shirt",
-        description: "With Global leaders Logo - Space Gray - white and black",
-        price: 45,
-        discountPrice: 55,
-        discount: "20% OFF",
-        colors: [
-            { id: 1, name: 'Gray', colorCode: '#B0B0B0' },
-            { id: 2, name: 'Silver', colorCode: '#D3D3D3' },
-            { id: 3, name: 'Black', colorCode: '#000000' },
-            { id: 4, name: 'White', colorCode: '#FFFFFF' }
-        ],
-        sizes: ["S", "M", "L", "XL"],
+        name: " Ruspina Amena T-Shirt ",
+        description: "Gen 23.24 with blue man logo - 100% coton - Black",
+        price: 25,
+        discountPrice: 30,
+        discount: "16.67% OFF",
+        
+        sizes: ["S", "M", "L"],
         images: [
-            tShirtFront,
-            tShirtBack,
-            tShirtFront,
-            tShirtBack,
-            tShirtFront
+            Amena1,
+            Amena2
+            
         ],
         sku: "A264671",
         availability: "In Stock",
         brand: "Ruspina",
         category: "T-Shirt",
-        descriptionLong: `Introducing the ultimate AIESEC Bracelet by the Ruspina Local Committee. This elegantly crafted accessory is more than just a bracelet – it’s a symbol of unity, leadership, and global impact. Made with premium materials, this bracelet combines style, durability, and meaning, making it the perfect addition to any AIESEC member’s collection.
-        A Connection to the Global Community: Wearing the Ruspina Local Committee’s AIESEC Bracelet connects you to a network of like-minded individuals around the world. It’s a statement of your commitment to global exchange, cultural understanding, and making a positive impact in your community.`
+        descriptionLong: `A high-quality T-shirt with a vibrant and captivating design that showcases the unique culture of AIESEC Ruspina. This T-shirt represents the commitment and dedication of its members, making it a proud symbol of belonging and purpose.`
     },
+    
     {
         id: 2,
-        name: "2024 Aiesec Global Bracelet",
-        description: "With Global leaders Logo - Silver and Black",
-        price: 25,
-        discountPrice: 30,
-        discount: "15% OFF",
-        colors: [
-            { id: 1, name: 'Silver', colorCode: '#C0C0C0' },
-            { id: 2, name: 'Black', colorCode: '#000000' }
-        ],
+        name: " Aiesec تونس mini tote bag",
+        description: "With Tunisian map - beige",
+        price: 10,
+        discountPrice: 12,
+        discount: "16.67% OFF",
+       
         images: [
-            bracelet1,
-            bracelet2
+            tote1,
+            tote2
         ],
         sku: "B127845",
         availability: "In Stock",
-        brand: "Global Leaders",
-        category: "Bracelet",
-        descriptionLong: `A sleek and modern bracelet that embodies the spirit of AIESEC. Wear it to show your commitment to global leadership and cultural exchange.`
+        brand: "Ruspina",
+        category: "Tote Bag",
+        descriptionLong: `A mini tote bag crafted with high-quality materials, designed to proudly represent your affiliation with AIESEC in Tunisia. Perfect for showcasing your connection to the organization with both style and durability.`
     },
     {
         id: 3,
-        name: "2024 Aiesec Leadership T-Shirt",
-        description: "With Global leaders Logo - Navy Blue - white and gold",
-        price: 50,
-        discountPrice: 60,
-        discount: "17% OFF",
-        colors: [
-            { id: 1, name: 'Navy Blue', colorCode: '#000080' },
-            { id: 2, name: 'White', colorCode: '#FFFFFF' },
-            { id: 3, name: 'Gold', colorCode: '#FFD700' }
-        ],
-        sizes: ["S", "M", "L", "XL"],
+        name: " Aiesec Ruspina blue T-Shirt",
+        description: "With blue man logo - 100% coton - Blue",
+        price: 25,
+        discountPrice: 30,
+        discount: "16.67% OFF",
+       
+        sizes: ["S", "M", "L"],
         images: [
-            tShirtLeadershipFront,
-            tShirtLeadershipBack
+            blue1,
+            blue2
         ],
         sku: "A371569",
         availability: "In Stock",
@@ -84,47 +71,56 @@ const products = [
     },
     {
         id: 4,
-        name: "2024 Aiesec Unity Bracelet",
-        description: "With Global leaders Logo - Gold and Black",
-        price: 30,
-        discountPrice: 35,
-        discount: "14% OFF",
-        colors: [
-            { id: 1, name: 'Gold', colorCode: '#FFD700' },
-            { id: 2, name: 'Black', colorCode: '#000000' }
-        ],
+        name: "Aiesec Ruspina BluBlu Bracelet",
+        description: "with Debossed ink filled - Ruspina Logo - Blue ",
+        price: 5,
+        discountPrice: 6,
+        discount: "16.67% OFF",
+       
         images: [
-            braceletUnity1,
-            braceletUnity2
+            braBlue2,
+            braBlue1
         ],
         sku: "B248571",
         availability: "In Stock",
         brand: "Unity",
         category: "Bracelet",
-        descriptionLong: `A bracelet that symbolizes unity and togetherness. Wear it to show your support for global peace and understanding.`
+        descriptionLong: `The ultimate bracelet "روسبينا تعلو ولا يعلى عليها" that symbolizes striving for excellence, making it the perfect addition to any AIESEC member’s collection.`
     },
     {
         id: 5,
-        name: "2024 Aiesec Impact T-Shirt",
-        description: "With Global leaders Logo - Green and White",
-        price: 40,
-        discountPrice: 50,
-        discount: "20% OFF",
-        colors: [
-            { id: 1, name: 'Green', colorCode: '#008000' },
-            { id: 2, name: 'White', colorCode: '#FFFFFF' }
-        ],
-        sizes: ["S", "M", "L", "XL"],
+        name: "Tu'LDS 2021 T-shirt",
+        description: "With Attack on Titan Logo - 100 % coton - Black",
+        price: 25,
+        discountPrice: 30,
+        discount: "16.67% OFF",
+       
+        sizes: ["S", "M", "L"],
         images: [
-            tShirtImpactFront,
-            tShirtImpactBack
+            tulds1,
+            tulds2
         ],
         sku: "A462789",
         availability: "In Stock",
-        brand: "Impact",
+        brand: "Ruspina",
         category: "T-Shirt",
-        descriptionLong: `An impactful T-shirt for those who are making a difference in the world. Show your commitment to global impact with this stylish and comfortable shirt.`
+        descriptionLong: `A T-shirt that carries special memories for many of us, marking the first national conference after the pandemic. A symbol of resilience and togetherness during a significant moment in our journey.`
+    },
+    {
+        id: 6, 
+        name: "Aiesec Ruspina Red velvet Bracelet",
+        description: "with Debossed ink filled - Ruspina Logo - Red",
+        price: 5,
+        discountPrice: 6,
+        discount: "16.67% OFF",
+        images: [braBlue2, braBlue1], 
+        sku: "B357852",
+        availability: "In Stock",
+        brand: "Unity",
+        category: "Bracelet",
+        descriptionLong: `A unique elastic bracelet that signifies unity and leadership, a perfect accessory for AIESEC Ruspina members to showcase their connection and commitment to the organization.`
     }
+    
 ];
 
 export default products;

@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 
-import AddImage2 from "../../assets/add/add2.png";
+
+import home22 from "../../assets/home2.jpg";
 
 export default function Guide() {
   return (
@@ -13,16 +14,16 @@ export default function Guide() {
             <AddLeft>
               <AddLeftInner>
                 <ImgWrapper className="flexCenter">
-                  <img className="radius8" src={AddImage2} alt="add" />
+                  <img className="radius8" src={home22} alt="add" />
                 </ImgWrapper>
               </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold">A few words about company</h4>
-              <h2 className="font40 extraBold">A Study of Creativity</h2>
+              <h4 className="font15 semiBold">A glimpse of </h4>
+              <h2 className="font40 extraBold">creativity and uniqueness</h2>
               <p className="font12">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                Showcasing a unique blend of creativity , reflecting the dynamic spirit of our LC, unwavering commitment and demonstrating dedication.
+                 
               </p>
             </AddRight>
           </Advertising>
@@ -107,7 +108,8 @@ const ImgWrapper = styled.div`
   padding: 0 15%;
   img {
     width: 100%;
-    height: auto;
+    height: 390px; /* Set a specific height */
+    object-fit: cover; 
   }
   @media (max-width: 400px) {
     padding: 0;

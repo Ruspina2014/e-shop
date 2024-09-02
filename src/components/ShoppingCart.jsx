@@ -12,21 +12,23 @@ const ShoppingCart = () => {
 
   const handleRemove = (id) => {
     const updatedItems = cartItems.filter(item => item.id !== id);
+  
     setCartItems(updatedItems);
-    localStorage.setItem('cart', JSON.stringify(updatedItems));
+    localStorage.setItem('cart', JSON.stringify(updatedItems)); // Save to local storage
   };
 
   const handleQuantityChange = (id, delta) => {
     const updatedItems = cartItems.map(item =>
       item.id === id ? { ...item, quantity: item.quantity + delta } : item
     );
+  
     setCartItems(updatedItems);
-    localStorage.setItem('cart', JSON.stringify(updatedItems));
+    localStorage.setItem('cart', JSON.stringify(updatedItems)); // Save to local storage
   };
 
   // Calculate subtotal
   const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-  const discount = 24;
+  const discount = subtotal * 0.10;
   const total = subtotal - discount;
 
   const handleCheckout = () => {
@@ -56,7 +58,7 @@ const ShoppingCart = () => {
                     <p>{item.name}</p>
                   </td>
                   <td className="item-price">
-                    <p>${item.price}</p>
+                    <p>{item.price}TND</p>
                   </td>
                   <td className="item-quantity">
                     <div className="quantity-control">
@@ -66,7 +68,7 @@ const ShoppingCart = () => {
                     </div>
                   </td>
                   <td className="item-subtotal">
-                    <p>${item.price * item.quantity}</p>
+                    <p>{item.price * item.quantity}TND</p>
                   </td>
                   <td className="remove-item">
                     <button onClick={() => handleRemove(item.id)}>
@@ -85,11 +87,11 @@ const ShoppingCart = () => {
         <div className="cart-totals">
           <h2>Cart Totals</h2>
           <div className="totals">
-            <p><span className='graytext'>Sub-total:</span> <span>${subtotal}</span></p>
-            <p><span className='graytext'>Shipping:</span> <span>Free</span></p>
-            <p><span className='graytext'>Discount:</span> <span>${discount}</span></p>
+            <p><span className='graytext'>Sub-total:</span> <span>{subtotal} TND</span></p>
+            <p><span className='graytext'>Shipping:</span> <span>No shipping</span></p>
+            <p><span className='graytext'>Discount:</span> <span>{discount} TND </span></p>
             <hr className="red-border"></hr>
-            <p>Total: <span>${total}</span></p>
+            <p>Total: <span>{total} TND</span></p>
           </div>
           <div className="checkOutBtn">
         <button className="checkout" onClick={handleCheckout}>PROCEED TO CHECKOUT</button>

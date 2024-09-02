@@ -31,7 +31,7 @@ function Product({product}) {
           <span className="price-original">{product.price} TND</span>
         </div>
         <button onClick={handleBuyNow} className="buy-now-button">
-          Buy Now
+          View
         </button>
       </div>
     </div>
@@ -104,12 +104,12 @@ function Cata() {
         ))}
       </div>
       <div className="pagination">
-        <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+      <button onClick={handlePreviousPage} disabled={currentPage === 1}>
           Previous
         </button>
         <span>Page {currentPage} of {totalPages}</span>
         <button onClick={handleNextPage} disabled={currentPage === totalPages}>
-          Next
+        <span style={{ color: 'white' }}>et</span>Next<span style={{ color: 'white' }}>et</span>   
         </button>
       </div>
       <ScrollToTop />

@@ -14,11 +14,12 @@ function ReservationForm() {
             name: item.name,
             price: item.price,
             quantity: item.quantity,
-            subtotal: item.price * item.quantity
+            subtotal: item.price * item.quantity,
+            size: item.size
         }));
 
         const subtotal = items.reduce((acc, item) => acc + item.subtotal, 0);
-        const discount = 24;
+        const discount = 0.1*subtotal;
         const total = subtotal - discount;
 
         setTotalData({
@@ -38,7 +39,7 @@ function ReservationForm() {
 
         console.log("Form Data Submitted:", data); // Log the complete data object to the console
 
-        const response = await fetch('https://script.google.com/macros/s/AKfycbyF5XMwZv3IOEWANKmfs08fWG22XRMvsEXust8Vdd6K9gCH0rIpHK7ZtW5MBZWLUCvlyw/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbwqCaAtdYXVzLCUXalEMMAeMkTeeTPJ1Mpi2noEcKCloRq59fpVmsZInP7EivKBbCh0fw/exec', {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
