@@ -106,20 +106,7 @@ const products = [
         category: "T-Shirt",
         descriptionLong: `A T-shirt that carries special memories for many of us, marking the first national conference after the pandemic. A symbol of resilience and togetherness during a significant moment in our journey.`
     },
-    {
-        id: 6, 
-        name: "Aiesec Ruspina Red velvet Bracelet",
-        description: "with Debossed ink filled - Ruspina Logo - Red",
-        price: 5,
-        discountPrice: 6,
-        discount: "16.67% OFF",
-        images: [braBlue2, braBlue1], 
-        sku: "B357852",
-        availability: "In Stock",
-        brand: "Unity",
-        category: "Bracelet",
-        descriptionLong: `A unique elastic bracelet that signifies unity and leadership, a perfect accessory for AIESEC Ruspina members to showcase their connection and commitment to the organization.`
-    }
+  
     
 ];
 
