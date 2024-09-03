@@ -28,8 +28,8 @@ const ShoppingCart = () => {
 
   // Calculate subtotal
   const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-  const discount = subtotal * 0.10;
-  const total = subtotal - discount;
+  const discount = subtotal * 0.07;
+const total = Math.floor(subtotal - discount);
 
   const handleCheckout = () => {
     navigate('/Form', { state: { cartItems } });

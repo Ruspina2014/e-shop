@@ -90,7 +90,7 @@ const ProductDetails = () => {
               <span className='meta-name'>Category: {product.category}</span>
             </div>
           </div>
-          <p className="price">{product.price} DT <span className="discount">{product.discountPrice}DT</span>{product.discount ? <span className="off">20% OFF</span> : null}</p>
+          <p className="price">{product.price} DT <span className="discount">{product.discountPrice}DT</span>{product.discount ? <span className="off">{product.discount}</span> : null}</p>
           <hr style={{ borderColor: '#E4E7E9', borderWidth: '0.5px' }} />
           <div className='selectors'>
             {(product.category === "Bracelet" || product.category === "Tote Bag") ? null :

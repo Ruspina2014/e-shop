@@ -15,9 +15,9 @@ const products = [
         id: 1,
         name: " Ruspina Amena T-Shirt ",
         description: "Gen 23.24 with blue man logo - 100% coton - Black",
-        price: 25,
+        price: 27,
         discountPrice: 30,
-        discount: "16.67% OFF",
+        discount: "10% OFF",
         
         sizes: ["S", "M", "L"],
         images: [
@@ -36,9 +36,9 @@ const products = [
         id: 2,
         name: " Aiesec تونس mini tote bag",
         description: "With Tunisian map - beige",
-        price: 10,
+        price: 10.8,
         discountPrice: 12,
-        discount: "16.67% OFF",
+        discount: " 10.42% OFF",
        
         images: [
             tote1,
@@ -54,9 +54,9 @@ const products = [
         id: 3,
         name: " Aiesec Ruspina blue T-Shirt",
         description: "With blue man logo - 100% coton - Blue",
-        price: 25,
+        price: 27,
         discountPrice: 30,
-        discount: "16.67% OFF",
+        discount: "10% OFF",
        
         sizes: ["S", "M", "L"],
         images: [
@@ -73,9 +73,9 @@ const products = [
         id: 4,
         name: "Aiesec Ruspina BluBlu Bracelet",
         description: "with Debossed ink filled - Ruspina Logo - Blue ",
-        price: 5,
+        price: 5.38,
         discountPrice: 6,
-        discount: "16.67% OFF",
+        discount: "10.33% OFF",
        
         images: [
             braBlue2,
@@ -91,9 +91,9 @@ const products = [
         id: 5,
         name: "Tu'LDS 2021 T-shirt",
         description: "With Attack on Titan Logo - 100 % coton - Black",
-        price: 25,
+        price: 27,
         discountPrice: 30,
-        discount: "16.67% OFF",
+        discount: "10% OFF",
        
         sizes: ["S", "M", "L"],
         images: [
